@@ -2,8 +2,7 @@ IMAGE = ndlp-1.0.1
 CONTAINER = NetworkDataLakeProxy-1.0.1
 SERVER_PORT = 4019
 PORT = 4019
-#DOCKER_HOST = linkvis-ci-01
-DATAFILE = dataFile-linkvisci.json
+DATAFILE = dataFile.json
 
 # Build docker image
 image:
