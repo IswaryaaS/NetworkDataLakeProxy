@@ -1711,10 +1711,10 @@
         ],
         "forwarding-domain": [
           {
-            "uuid": "ndlp-1-0-0-op-fd-000",
+            "uuid": "ndlp-1-0-1-op-fd-000",
             "forwarding-construct": [
               {
-                "uuid": "ndlp-1-0-0-op-fc-bm-999",
+                "uuid": "ndlp-1-0-1-op-fc-bm-999",
                 "name": [
                   {
                     "value-name": "ForwardingKind",
