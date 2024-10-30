@@ -4,7 +4,7 @@
     "name": "NDLP",
     "endpointPrefix": "",
     "latency": 0,
-    "port": 3005,
+    "port": 4019,
     "hostname": "",
     "folders": [],
     "routes": [

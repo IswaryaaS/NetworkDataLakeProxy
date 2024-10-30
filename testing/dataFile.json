@@ -9,7 +9,7 @@
 			},		
 			{
 				"serverName": "ndlp",
-				"server": "http://localhost:3005",
+				"server": "http://localhost:4019",
 				"authorizationCode": "Basic xyz",
 				"operationKey": "Operation key not yet provided.",
 				"userName": "KMO",
