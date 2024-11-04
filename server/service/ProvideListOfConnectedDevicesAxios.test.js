@@ -37,6 +37,6 @@ describe('provideListOfConnectedDevices', () => {
         );
 
         // Überprüft, ob das Ergebnis korrekt ist
-        expect(result).toBe(expectedResult);
+        expect(result.message).toBe(expectedResult);
     });
 });

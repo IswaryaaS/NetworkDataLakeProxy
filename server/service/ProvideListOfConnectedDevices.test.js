@@ -40,7 +40,7 @@ describe('provideListOfConnectedDevices', () => {
         );
 
         // Überprüft, ob das Ergebnis korrekt ist
-        expect(result).toBe(JSON.stringify(expectedResult));
+        expect(result.message).toBe(JSON.stringify(expectedResult));
     });
 
     it('should handle errors and throw an exception if postRequestDataFromMWDI fails', async () => {

@@ -25,13 +25,13 @@ describe('provideInventoryOfDevice', () => {
 
     it('should call getDataFromMWDI with correct arguments and return the result', async () => {
         const mockResult = {
-          "core-model-1-4:control-construct": [
-            {
-              "profile-collection": {
-                "profile": []
-              }
-            }
-          ]
+          "core-model-1-4:control-construct": {
+//            {
+//              "profile-collection": {
+//                "profile": []
+//              }
+//            }
+          }
         };
 
         const expectedResult = JSON.stringify({

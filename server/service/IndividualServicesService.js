@@ -40,12 +40,12 @@ exports.bequeathYourDataAndDie = function(requestUrl,body,user,originator,xCorre
 
 /**
  * Provides list of devices that are connected to the controller
- * returns mount-name-list
+ * returns mount-name-list in ret.message
  **/
 exports.provideListOfConnectedDevices = async function(requestUrl) {
   const ret = await requestHandler.postRequestDataFromMWDI(requestUrl, "PromptForProvidingListOfConnectedDeviceCausesReadingMwdiDeviceList", {});
 
-  return ret.message;
+  return ret;
 }
 
 
@@ -132,9 +132,10 @@ exports.provideInventoryOfDevice = async function(requestUrl, body) {
 
     let ret = await requestHandler.getDataFromMWDI(requestUrl, callbackName, body, fieldsFilter);
 
-    if (ret.code === responseCodeEnum.code.OK) {
-      ret.message = JSON.stringify(this.filterControlConstruct(JSON.parse(ret.message)));
-    }
+// filtering is done in the MWDI by the fields filter.
+//    if (ret.code === responseCodeEnum.code.OK) {
+//      ret.message = this.filterControlConstruct(ret.message);
+//    }
 
     return ret;
   } finally {
