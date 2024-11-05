@@ -1,15 +1,15 @@
- [
+[
 	{
 		"mode": "debug",
-		"targetCollectionName": "NetworkDataLakeProxyBasicTest",		
+		"targetCollectionName": "NetworkDataLakeProxyBasicTest",
 		"serverList": [
 			{
 				"serverName": "dummy",
 				"dummyUri": "ping.openBackhaul.com"
-			},		
+			},
 			{
 				"serverName": "ndlp",
-				"server": "http://localhost:4019",
+				"server": "http://localhost:3005",
 				"authorizationCode": "Basic xyz",
 				"operationKey": "Operation key not yet provided.",
 				"userName": "KMO",
@@ -28,7 +28,7 @@
 				"xCorrelator": "00000000-0000-0000-0000-000000000532",
 				"traceIndicator": "1",
 				"customerJourney": "CustomerJourney not yet defined."
-			},		
+			},
 			{
 				"serverName": "resultServer",
 				"server": "ping.openBackhaul.com",
@@ -36,13 +36,13 @@
 				"authorizationCode": "",
 				"operationKey": "",
 				"userName": "Thorsten Heinze",
-				"originator": "Tcc_NDLPv1.0.1",
+				"originator": "Tcc_MDIPv1.0.1",
 				"xCorrelator": "00000000-0000-0000-0000-000000000000",
 				"traceIndicator": "1",
 				"customerJourney": ""
 			}
 		],
-		"collectionInputList": [	
+		"collectionInputList": [
 			{
 				"collectionName": "NetworkDataLakeProxyBasicTest",
 				"serverToBeApplied": "ndlp",
@@ -54,7 +54,7 @@
 						}
 					}
 				]
-			}			
+			}
 		]
 	}
 ]

@@ -2,7 +2,7 @@
 Interface towards the NetworkDataLake
 
 ### Location
-The NetworkDataLakeProxy (NDLP) represents the demarcation towards a higher-layer NetworkDataLake.  
+The MultiDomainInventoryProxy (MDIP) represents the demarcation towards a higher-layer NetworkDataLake.  
 
 ### Description
 In principle, the NetworkDataLakeProxy is a fields filtered passthrough of data from the MWDI.  
