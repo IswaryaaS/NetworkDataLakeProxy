@@ -3,7 +3,7 @@ const individualServicesService = require('./IndividualServicesService');
 // Prüfung der Filterfunktion für Control Constructs
 test('filterControlConstruct', () => {
     const cc = {
-        "core-model-1-4:control-construct" : {
+        "core-model-1-4:control-construct" : [{
             "uuid": "723215222",
             "administrative-control": "core-model-1-4:ADMINISTRATIVE_CONTROL_QUIESCENT",
             "alarms-1-0:alarm-pac": {
@@ -102,11 +102,11 @@ test('filterControlConstruct', () => {
                     "value": "723215222"
                 }
             ]
-        }
+        }]
     };
 
     const expectedCc = {
-        "core-model-1-4:control-construct" : {
+        "core-model-1-4:control-construct" : [{
             "forwarding-domain" : [ {
                 "uuid" : "ro-2-0-2-op-fd-000",
                 "forwarding-construct" : [ {
@@ -181,7 +181,7 @@ test('filterControlConstruct', () => {
                     }
                 } ]
             } ]
-        }
+        }]
     };
 
     const filteredCc = individualServicesService.filterControlConstruct(cc);

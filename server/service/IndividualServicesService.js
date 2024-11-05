@@ -75,15 +75,21 @@ exports.filterControlConstruct = function filterControlConstruct(data) {
 
   if (cc) {
     // gefilterte Daten
-    let filtered = {"core-model-1-4:control-construct": {}};
+    let filtered = {"core-model-1-4:control-construct": []};
     let filteredConstruct = filtered["core-model-1-4:control-construct"];
 
-    for(const [nodeName, node] of Object.entries(cc)) {
-      copyNode(nodeName, node, "equipment", filteredConstruct);
-      copyNode(nodeName, node, /firmware.*/, filteredConstruct);
-      copyNode(nodeName, node, "profile-collection", filteredConstruct);
-      copyNode(nodeName, node, "forwarding-domain", filteredConstruct);
-      copyNode(nodeName, node, "logical-termination-point", filteredConstruct);
+    for(const elem of cc) {
+      let newElem = {}
+
+      for(const [nodeName, node] of Object.entries(elem)) {
+        copyNode(nodeName, node, "equipment", newElem);
+        copyNode(nodeName, node, /firmware.*/, newElem);
+        copyNode(nodeName, node, "profile-collection", newElem);
+        copyNode(nodeName, node, "forwarding-domain", newElem);
+        copyNode(nodeName, node, "logical-termination-point", newElem);
+      }
+
+      filteredConstruct.push(newElem);
     }
 
     data = filtered;
