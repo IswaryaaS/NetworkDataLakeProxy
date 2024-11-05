@@ -131,7 +131,7 @@ forwardings:
       fc-port-deletion:
       operation-client-deletion:
     initiating-requests:
-      # [all oam requests]
+    # [all oam requests]
     consequent-requests:
       - client-name: OamLog://v1/record-oam-request
         uuid: ndlp-1-0-0-op-c-bs-ol-2-1-2-000
@@ -153,7 +153,7 @@ forwardings:
       fc-port-deletion:
       operation-client-deletion:
     initiating-requests:
-      # [all oam requests]
+    # [all oam requests]
     consequent-requests:
       - client-name: AccessAdministration://v1/approve-basic-auth-request
         uuid: ndlp-1-0-0-op-c-bs-aa-2-1-2-000
