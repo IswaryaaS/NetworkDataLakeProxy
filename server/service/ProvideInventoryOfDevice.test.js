@@ -90,7 +90,7 @@ describe('provideInventoryOfDevice throttling', () => {
 
     const input = {"mount-name": "305251234"};
 
-    // Setzt den Rückgabewert des Mocks
+    // Set the Mock return value
     requestHandler.getDataFromMWDI.mockResolvedValue(getMockResultData(mockResult));
 
     // Der erste Aufruf muss erfolgreich sein.
@@ -107,9 +107,9 @@ describe('provideInventoryOfDevice throttling', () => {
       }
     }
 
-    // Alle zehn nachfolgenden Aufrufe innerhalb der Sekunde sollen abgewiesen werden.
+    // All ten calls in the following second interval shall be rejected.
     expect(errorReturns).toBe(10);
-    // Nur ein Aufruf darf durchgelassen wurden sein.
+    // Only one call shall be accepted.
     expect(requestHandler.getDataFromMWDI).toHaveBeenCalledTimes(1);
 
     // Nach Ablauf einer Sekunde muss der nächste Aufruf wieder erfolgreich ablaufen.

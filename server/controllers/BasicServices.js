@@ -363,9 +363,6 @@ module.exports.updateOperationKey = async function updateOperationKey(req, res, 
   await recordSvcRequest(startTime, xCorrelator, traceIndicator, user, originator, req, responseCode, responseBodyToDocument);
 };
 
-// 4-integrate-logging
-
-// 5-integrate-basic-services
 
 process.on('unhandledRejection', (reason, promise) => {
   logger.error(reason, 'Unhandled Rejection at:', promise);

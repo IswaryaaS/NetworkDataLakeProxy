@@ -1,6 +1,6 @@
 const individualServicesService = require('./IndividualServicesService');
 
-// Prüfung der Filterfunktion für Control Constructs
+// Checking the filter function for Control Constructs
 test('filterControlConstruct', () => {
     const cc = {
         "core-model-1-4:control-construct" : [{

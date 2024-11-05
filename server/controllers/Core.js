@@ -34,6 +34,3 @@ module.exports.getProfileInstance = function getProfileInstance(req, res, next, 
       await oamLogService.recordOamRequest(req.url, req.body, responseCode, req.headers.authorization, req.method);
     });
 };
-
-// 4-integrate-logging
-// 6-implement-oam-services

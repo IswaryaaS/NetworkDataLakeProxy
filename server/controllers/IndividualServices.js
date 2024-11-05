@@ -17,7 +17,7 @@ function removeParametersFromString(str) {
   return tokens[0];
 }
 
-// Aufruf von recordServiceRequest mit Protokollierung der Laufzeit
+// Call recordServiceRequest including the execution time
 async function recordSvcRequest(startTime, xCorrelator, traceIndicator, user, originator, req, responseCode, responseBodyToDocument) {
   let execTime = await restResponseHeader.executionTimeInMilliseconds(startTime);
   execTime = execTime? Math.round(execTime): 0;
@@ -184,7 +184,7 @@ function buildErrorResponse(response, error, responseHeader) {
 }
 
 
- // Handler für /v1/bequeath-your-data-and-die
+ // Handler for /v1/bequeath-your-data-and-die
 module.exports.bequeathYourDataAndDie = async function bequeathYourDataAndDie(req, res, next, body, user, originator, xCorrelator, traceIndicator, customerJourney) {
   const startTime = process.hrtime();
 
@@ -202,7 +202,7 @@ module.exports.bequeathYourDataAndDie = async function bequeathYourDataAndDie(re
 };
 
 
- // Handler für /v1/provide-list-of-connected-devices
+ // Handler for /v1/provide-list-of-connected-devices
 module.exports.provideListOfConnectedDevices = async function provideListOfConnectedDevices(req, res, next) {
   let startTime = process.hrtime();
 
@@ -215,7 +215,7 @@ module.exports.provideListOfConnectedDevices = async function provideListOfConne
 };
 
 
- // Handler für /v1/provide-inventory-data-of-device
+ // Handler for /v1/provide-inventory-data-of-device
 module.exports.provideInventoryOfDevice = async function provideInventoryOfDevice (req, res, next, body) {
   let startTime = process.hrtime();
 
@@ -226,7 +226,3 @@ module.exports.provideInventoryOfDevice = async function provideInventoryOfDevic
     return handleError(startTime, error, req, res);
   }
 };
-
-// 4-integrate-logging
-
-// 7-implement-individual-services
