@@ -8,7 +8,9 @@ var http = require('http');
 var oas3Tools = require('oas3-tools');
 var appCommons = require('onf-core-model-ap/applicationPattern/commons/AppCommons');
 
-var serverPort = 4019;
+const logger = require('./service/LoggingService.js').getLogger();
+
+const serverPort = 4019;
 
 // uncomment if you do not want to validate security e.g. operation-key, basic auth, etc
 //appCommons.openApiValidatorOptions.validateSecurity = false;
@@ -29,8 +31,8 @@ appCommons.setupExpressApp(app);
 
 // Initialize the Swagger middleware
 http.createServer(app).listen(serverPort, function () {
-    console.log('Your server is listening on port %d (http://localhost:%d)', serverPort, serverPort);
-    console.log('Swagger-ui is available on http://localhost:%d/docs', serverPort);
+    logger.info('Your server is listening on port %d (http://localhost:%d)', serverPort, serverPort);
+    logger.info('Swagger-ui is available on http://localhost:%d/docs', serverPort);
 });
 
 // perform application registration
