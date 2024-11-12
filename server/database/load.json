@@ -924,7 +924,7 @@
             "http-client-interface-1-0:http-client-interface-pac": {
               "http-client-interface-configuration": {
                 "application-name": "OldRelease",
-                "release-number": " >>> ReleaseNumber of the existing release <<< "
+                "release-number": "1.0.1"
               }
             }
           }
@@ -969,7 +969,7 @@
             "http-client-interface-1-0:http-client-interface-pac": {
               "http-client-interface-configuration": {
                 "application-name": "NewRelease",
-                "release-number": " >>> ReleaseNumber of the new release <<< "
+                "release-number": "1.0.1"
               }
             }
           }
