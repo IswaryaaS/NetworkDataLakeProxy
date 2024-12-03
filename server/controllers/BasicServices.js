@@ -8,7 +8,7 @@ const restResponseBuilder = require('onf-core-model-ap/applicationPattern/rest/s
 const executionAndTraceService = require('onf-core-model-ap/applicationPattern/services/ExecutionAndTraceService');
 const logger = require('../service/LoggingService.js').getLogger();
 
-const NEW_RELEASE_FORWARDING_NAME = 'PromptForBequeathingDataCausesRequestForBroadcastingInfoAboutServerReplacement';
+const NEW_RELEASE_FORWARDING_NAME = 'undefined';
 const OLD_RELEASE_FORWARDING_NAME = 'PromptForEmbeddingCausesRequestForBequeathingData';
 
 // Aufruf von recordServiceRequest mit Protokollierung der Laufzeit
